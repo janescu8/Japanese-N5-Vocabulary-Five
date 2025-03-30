@@ -49,7 +49,7 @@ def play_pronunciation(text, mp3="pronunciation.mp3", wav="pronunciation.wav"):
             st.audio(f, format="audio/wav")
 
 def clean_text(t):
-    return re.sub(r'[^a-zA-Z\-’\'\u3040-\u30ff\u4e00-\u9faf\u3000 ]', '', text).lower().strip()
+    return re.sub(r'[^a-zA-Z\-’\'\u3040-\u30ff\u4e00-\u9faf\u3000 ]', '', t).lower().strip()
 
 # 初始化狀態，只在選書或題數變更時才重新抽題
 if (
