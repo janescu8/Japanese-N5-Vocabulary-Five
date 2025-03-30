@@ -21,7 +21,7 @@ book_options = {
 }
 
 # 標題與選書
-st.title("📚 英文單字測試遊戲")
+st.title("📚 日文單字測試遊戲")
 selected_book = st.selectbox("請選擇一本書：", list(book_options.keys()))
 word_data = book_options[selected_book]
 st.write(f"📖 單字庫總數：{len(word_data)} 個單字")
