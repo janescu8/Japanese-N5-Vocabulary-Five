@@ -2,3 +2,4 @@ streamlit
 gTTS
 pydub
 openai
+re
