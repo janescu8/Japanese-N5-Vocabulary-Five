@@ -99,7 +99,9 @@ if st.session_state.current_index < len(st.session_state.words):
             else:
                 st.error(f"❌ 錯誤，正確答案是 {test_word}")
                 play_pronunciation(test_word)
-                st.session_state.mistakes.append((test_word, meaning, example_sentence))
+                if (test_word, meaning, example_sentence) not in st.session_state.mistakes:
+                    st.session_state.mistakes.append((test_word, meaning, example_sentence))
+
     
         elif test_type == "單字造句":
             if not user_answer.strip():
