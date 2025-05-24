@@ -11,14 +11,11 @@ from openai import OpenAI
 client = OpenAI(api_key=st.secrets["openai_api_key"])
 
 # 匯入所有書籍的單字庫
-from mika_56 import word_data as mika_56
-from ken_talk_01 import word_data as ken_talk_01
-
+from may_24_a import word_data as may_24_a
 
 # 書籍選擇
 book_options = {
-    "#56新しいしゅみ 【N5】 My new hobby (for N5 listeners)": mika_56,
-    "【Ken’s ★ Talk】🇯🇵Japanese Podcast with English subtitles #1｜僕の好きな東京": ken_talk_01,
+    "may_24_a": may_24_a,
 }
 
 # 標題與選書
