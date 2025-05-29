@@ -11,11 +11,13 @@ from openai import OpenAI
 client = OpenAI(api_key=st.secrets["openai_api_key"])
 
 # 匯入所有書籍的單字庫
-from may_24_a import word_data as may_24_a
+from may_25_a import word_data as may_25_a
+from may_29_a import word_data as may_29_a
 
 # 書籍選擇
 book_options = {
-    "may_24_a": may_24_a,
+    "may_25_a": may_25_a,
+    "may_29_a": may_29_a,
 }
 
 # 標題與選書
