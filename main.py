@@ -3,6 +3,7 @@ import streamlit as st
 import re
 import os
 import time
+import importlib
 from gtts import gTTS
 from pydub import AudioSegment
 from openai import OpenAI
@@ -10,14 +11,15 @@ from openai import OpenAI
 # 初始化 OpenAI client（新版 API）
 client = OpenAI(api_key=st.secrets["openai_api_key"])
 
-# 匯入所有書籍的單字庫
-from may_25_a import word_data as may_25_a
-from may_29_a import word_data as may_29_a
+# 要載入的檔名清單
+book_names = [
+    "may_25_a",
+    "may_29_a"
+]
 
-# 書籍選擇
+# 動態匯入並建立 book_options 字典
 book_options = {
-    "may_25_a": may_25_a,
-    "may_29_a": may_29_a,
+    name: importlib.import_module(name).word_data for name in book_names
 }
 
 # 標題與選書
