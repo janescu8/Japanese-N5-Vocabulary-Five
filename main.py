@@ -24,7 +24,7 @@ book_options = {
 
 
 # UI
-st.title("📚 日文單字遊戲 / English Vocabulary Game")
+st.title("📚 日文單字遊戲 / Japanese Vocabulary Game")
 selected_book = st.selectbox("請選擇一本書 / Choose a book:", list(book_options.keys()))
 word_data = book_options[selected_book]
 st.write(f"📖 單字庫總數 / Total words: {len(word_data)}")
