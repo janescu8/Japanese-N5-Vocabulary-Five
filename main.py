@@ -27,7 +27,7 @@ selected_book = st.selectbox("請選擇一本書 / Choose a book:", list(book_op
 word_data = book_options[selected_book]
 st.write(f"📖 單字庫總數 / Total words: {len(word_data)}")
 
-num_questions = st.number_input("輸入測試題數 / Number of questions:", min_value=1, max_value=len(word_data), value=10, step=1)
+num_questions = st.number_input("輸入測試題數 / Number of questions:", min_value=1, max_value=len(word_data), value=5, step=1)
 test_type = st.radio("請選擇測試類型 / Choose test type:", ["拼寫測試 / Spelling", "填空測試 / Fill-in-the-blank", "單字造句 / Sentence creation"])
 
 # 工具函式
